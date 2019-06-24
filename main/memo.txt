@@ -1,5 +1,6 @@
 mcl からビルド --> sample 内のbls_sig.cpp を書き換えて作成
 （mcl をビルドした後、make sample を打てば、そのままコンパイルが通る）
+実行形式はbin/bls_sig.exe としてできる
 
 ドキュメント数：19行目のdefine n XXX のXXX で定義
 キーワードの数：20行目のdefine msgn XXX で定義
