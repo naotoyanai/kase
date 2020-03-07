@@ -1,0 +1,24 @@
+Build from mcl library --> Replace sample/bls_sig.cpp. 
+(After build mcl, type "make sample" and then be compiled.)
+Output is "bin/bls_sig.exe"
+
+The number of Document: Defined as "define n XXX" as XXX in the line 19. 
+The number of Keyword : Defined as "define msgn XXX" as XXX in the line 20. 
+(Keyword itself is defined in the line 206 at the main function.) 
+
+Each algorithm is defined as an individual function. 
+
+Note: In Setup, generates are generated in G1 and G2, respectively, because asymmetric pairing is available in the mcl libeary. (This implementation is slightly redundant but no problem for computation.)
+
+The process of main function: 
+line 164-177: Define indexes for documents. 
+
+Each function except for Setup and KeyGen in the main function is looping for any index. 
+--> by inserting a time evaluation function before/after each function, our experimental result will be reproducible. 
+
+Notice: These code are just for sample implementation. So, communication between a main sever and an aid sever in Adujst and Test algorithms of the original paper is not implemented. 
+
+
+
+
+
