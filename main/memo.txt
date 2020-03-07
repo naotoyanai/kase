@@ -1,20 +1,24 @@
-mcl からビルド --> sample 内のbls_sig.cpp を書き換えて作成
-（mcl をビルドした後、make sample を打てば、そのままコンパイルが通る）
-実行形式はbin/bls_sig.exe としてできる
+Build from mcl library --> Replace sample/bls_sig.cpp. 
+(After build mcl, type "make sample" and then be compiled.)
+Output is "bin/bls_sig.exe"
 
-ドキュメント数：19行目のdefine n XXX のXXX で定義
-キーワードの数：20行目のdefine msgn XXX で定義
-（実際のキーワードはmain 内の206行目の文字列配列）
+The number of Document: Defined as "define n XXX" as XXX in the line 19. 
+The number of Keyword : Defined as "define msgn XXX" as XXX in the line 20. 
+(Keyword itself is defined in the line 206 at the main function.) 
 
-各アルゴリズムは個別の関数として定義
-Setup：非対称ペアリングしかなかったため、G1, G2それぞれでgenerators を定義（冗長にはなるが、計算上は問題がない）
+Each algorithm is defined as an individual function. 
 
-main 内の処理について：
-164-177 行目：ドキュメント用のインデックスを定義
+Note: In Setup, generates are generated in G1 and G2, respectively, because asymmetric pairing is available in the mcl libeary. (This implementation is slightly redundant but no problem for computation.)
 
-各関数のうちSetup, KeyGen以外は全インデックスに対しループ
---> 時間計測関数を挟んで平均をとることで測定可能
+The process of main function: 
+line 164-177: Define indexes for documents. 
 
-注意事項：Adjust, Test ではメインサーバとAid サーバ間で数値の交換処理が必要になるが、この部分は未実装
---> 一言「実装してない」と言及するか、一般的な法サイズと通信回線速度から通信遅延を算出・加算するのが手
+Each function except for Setup and KeyGen in the main function is looping for any index. 
+--> by inserting a time evaluation function before/after each function, our experimental result will be reproducible. 
+
+Notice: These code are just for sample implementation. So, communication between a main sever and an aid sever in Adujst and Test algorithms of the original paper is not implemented. 
+
+
+
+
 
