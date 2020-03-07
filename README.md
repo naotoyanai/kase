@@ -1,5 +1,5 @@
-# kase
-This is a repository of key aggregate searchable encryption as behavior of the corresponding author of the following paper.  
+# Key-Aggregate Searchable Encryption
+This is a repository of key-aggregate searchable encryption as behavior of the corresponding author of the following paper.  
 Authors: Masahiro Kamimura, Naoto Yanai, Shingo Okamura, Jason Paul Cruz  
 Title: Key-Aggregate Searchable Encryption, Revisited: Formal Foundations for Cloud Applications, and Their Implementation  
 Journal: IEEE Access (Volume: 8 Page: 24153 - 24169)  
